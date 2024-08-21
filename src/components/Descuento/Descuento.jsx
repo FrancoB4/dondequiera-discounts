@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import './Descuento.css'
 
 function Descuento() {
-    const targetEndpoint = 'http://localhost:8082/api/v1/descuentos';
+    const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/descuentos';
     const {dni} = useParams();
     const [descuento, setDescuento] = useState({ cliente: {nombre: "" } });
 
