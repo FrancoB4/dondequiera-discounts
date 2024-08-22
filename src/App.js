@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Registro from "./components/Registro/Registro";
 import Descuento from "./components/Descuento/Descuento";
 import DescuentoHome from "./components/Descuento/DescuentoHome";
+import DescuentoActivo from "./components/Descuento/DescuentoActivo";
 
 function App() {
     return (
@@ -17,6 +18,8 @@ function App() {
                     <Route path='/descuento/:dni' element={<Descuento />} />
 
                     <Route path='/descuentos/lista' element={<DescuentoHome />} />
+
+                    <Route path='/poseeDescuentoActivo/:dni' element={<DescuentoActivo />} />
                 </Routes>
             </div>
         </>
