@@ -13,13 +13,15 @@ function App() {
         <>
             <div className="App-container vh-100">
                 <Routes>
-                    <Route path='/' element={<Registro />} />
+                    <Route path='/' element={<Registro tipo={0} />} />
+
+                    <Route path='/premio' element={<Registro tipo={1} />} />
 
                     <Route path='/descuento/:dni' element={<Descuento />} />
 
                     <Route path='/descuentos/lista' element={<DescuentoHome />} />
 
-                    <Route path='/poseeDescuentoActivo/:dni' element={<DescuentoActivo />} />
+                    <Route path='/poseeDescuentoActivo/:dni/:tipo' element={<DescuentoActivo />} />
                 </Routes>
             </div>
         </>

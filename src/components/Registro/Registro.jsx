@@ -4,15 +4,15 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Redes from "../Redes/Redes";
 
-function Registro() {
-    const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/generarDescuento'
-    // const targetEndpoint = 'http://localhost:8080/api/v1/generarDescuento'
+function Registro({tipo}) {
+    // const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/generarDescuento'
+    const targetEndpoint = 'http://localhost:8080/api/v1/generarDescuento'
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
         try {
-            const res = await axios.post(targetEndpoint + `?dni=${data.dni}&nombre=${data.nombre}`);
+            const res = await axios.post(targetEndpoint + `?dni=${data.dni}&nombre=${data.nombre}&tipo=${tipo}`);
             console.log(res);
             if (!res.data) {
                 console.log(`No se pudo crear el descuento debido al error: ${res}`);
@@ -22,7 +22,7 @@ function Registro() {
             }
         }
         catch (error) {
-            navigate(`/poseeDescuentoActivo/${data.dni}`);
+            navigate(`/poseeDescuentoActivo/${data.dni}/${tipo}`);
         }
     }
 
