@@ -2,6 +2,7 @@ import axios from "axios";
 import './Registro.css'
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import Redes from "../Redes/Redes";
 
 function Registro() {
     const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/generarDescuento'
@@ -40,12 +41,13 @@ function Registro() {
                             <span className="input-group-text"><i className="bi bi-person-vcard"></i></span>
                             <input name="" className="form-control" placeholder="Tu DNI" type="number" {...register('dni')}/>
                         </div>
-                        <div className="form-group input-group mb-2">
+                        <div className="form-group input-group mb-4">
                             <span className="input-group-text"> <i className="bi bi-person-badge"></i> </span>
                             <input name="" className="form-control" placeholder="Tu nombre" type="text" {...register('nombre')}/>
                         </div>
                         <div className="form-group">
-                            <button type="submit" className="btn btn-primary btn-block"> Quiero mi regalo! </button>
+                            <Redes />
+                            <button type="submit" className="btn btn-primary btn-block ms-3"> Quiero mi regalo! </button>
                         </div>
                     </form>
                     </div>
