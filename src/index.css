@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "EditorialOld-Italic";
+    src: local("EditorialOld-Italic"),
+     url("./fonts/EditorialOld/PPEditorialOld-Italic.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "EditorialOld-Regular";
+    src: local("EditorialOld-Regular"),
+     url("./fonts/EditorialOld/PPEditorialOld-Regular.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "EditorialOld-Ultrabold";
+    src: local("EditorialOld-Ultrabold"),
+     url("./fonts/EditorialOld/PPEditorialOld-Ultrabold.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "EditorialOld-UltraboldItalic";
+    src: local("EditorialOld-UltraboldItalic"),
+     url("./fonts/EditorialOld/PPEditorialOld-UltraboldItalic.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "EditorialOld-Ultralight";
+    src: local("EditorialOld-Ultralight"),
+     url("./fonts/EditorialOld/PPEditorialOld-Ultralight.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "EditorialOld-UltralightItalic";
+    src: local("EditorialOld-UltralightItalic"),
+     url("./fonts/EditorialOld/PPEditorialOld-UltralightItalic.otf") format("truetype");
+    font-weight: bold;
+}

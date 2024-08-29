@@ -33,17 +33,18 @@ function Registro({tipo}) {
                 <div className="col-12 col-md-4 col-lg-3 h-50 ">
                 <div className="card shadow">
                     <div className="card-body mx-auto">
-                    <h4 className="card-title mt-3 text-center">¡Gracias por acompañarnos siempre!</h4>
+                    <h3 className="card-title mt-3 text-center font-face-eoi">¡ Cumplimos 2 años !</h3>
+                    <h5 className="card-title mt-3 text-center">Gracias por ser parte</h5>
                     <hr />
-                    <p className="text-center">Tenemos un regalo para vos, completá tus datos para obtenerlo.</p>
+                    <p className="text-center font-face-eoi">Tenemos un regalo para vos, completá tus datos para obtenerlo.</p>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group input-group mb-2">
                             <span className="input-group-text"><i className="bi bi-person-vcard"></i></span>
-                            <input name="" className="form-control" placeholder="Tu DNI" type="number" {...register('dni')}/>
+                            <input name="" className="form-control font-face-reg" placeholder="Tu DNI" type="number" {...register('dni')}/>
                         </div>
                         <div className="form-group input-group mb-4">
                             <span className="input-group-text"> <i className="bi bi-person-badge"></i> </span>
-                            <input name="" className="form-control" placeholder="Tu nombre" type="text" {...register('nombre')}/>
+                            <input name="" className="form-control font-face-reg" placeholder="Tu nombre" type="text" {...register('nombre')}/>
                         </div>
                         <div className="form-group">
                             <Redes />

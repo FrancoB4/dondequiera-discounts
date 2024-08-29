@@ -1,0 +1,27 @@
+.font-face-eoi {
+    font-family: "EditorialOld-Italic";
+}
+
+.font-face-eor {
+    font-family: "EditorialOld-Regular";
+}
+
+.font-face-eoub {
+    font-family: "EditorialOld-Ultrabold";
+}
+
+.font-face-eoubi {
+    font-family: "EditorialOld-UltraboldItalic";
+}
+
+.font-face-eoul {
+    font-family: "EditorialOld-Ultralight";
+}
+
+.font-face-eouli {
+    font-family: "EditorialOld-UltralightItalic";
+}
+
+.font-face-reg {
+    font-family:Arial, Helvetica, sans-serif;
+}
