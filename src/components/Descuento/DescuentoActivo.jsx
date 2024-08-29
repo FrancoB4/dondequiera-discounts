@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 function DescuentoActivo() {
-    // const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/descuentos';
-    const targetEndpoint = 'http://localhost:8080/api/v1/descuentos';
+    const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/descuentos';
+    // const targetEndpoint = 'http://localhost:8080/api/v1/descuentos';
     const {dni, tipo} = useParams();
     const [descuento, setDescuento] = useState({ cliente: {nombre: "" } });
 

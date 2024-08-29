@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Redes from "../Redes/Redes";
 
 function Registro({tipo}) {
-    // const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/generarDescuento'
-    const targetEndpoint = 'http://localhost:8080/api/v1/generarDescuento'
+    const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/generarDescuento'
+    // const targetEndpoint = 'http://localhost:8080/api/v1/generarDescuento'
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
 

@@ -4,8 +4,8 @@ import DescuentoList from "./DescuentoList";
 import { useEffect, useState } from "react";
 
 function DescuentoHome() {
-    // const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/descuentos';
-    const targetEndpoint = 'http://localhost:8080/api/v1/descuentos';
+    const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/descuentos';
+    // const targetEndpoint = 'http://localhost:8080/api/v1/descuentos';
     const [descuentos, setDescuentos] = useState([{}]);
 
     const fetchDescuentos = async (data) => {
