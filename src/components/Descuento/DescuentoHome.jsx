@@ -72,7 +72,7 @@ function DescuentoHome() {
 
 
     return (
-        <div className="container">
+        <div className="container font-face-reg">
             <DescuentoFiltro fetchDescuentos={fetchDescuentos}/>
 
             <DescuentoList descuentos={descuentos} eliminarDescuento={eliminarDescuento} toggleDescuento={toggleDescuento}/>
