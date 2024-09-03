@@ -45,7 +45,7 @@ function DescuentoActivo() {
                 <div className="card shadow">
                     <div className="card-body mx-auto">
                         <h4 className="card-title mt-3 text-center">¡Ya tenes un descuento activo!</h4>
-                        <h4 className="m-3">Usalo para conseguir poder otro</h4>
+                        <h4 className="m-3">Usalo para poder conseguir otro</h4>
                         <h4 className="m-3">Este es tu descuento:</h4>
                         <h1 className="m-3">{descuento.porcentajeDescuento}%</h1>
                         <hr className=""/>
