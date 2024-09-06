@@ -40,11 +40,36 @@ function DescuentoHome({targetEndpoint}) {
     }
 
     useEffect(() => {
-        const fetch = async () => {
-            await fetchDescuentos();
+        const fetch = async (data) => {
+            let req = targetEndpoint + 'descuentos';
+            if (data?.dniCliente) {
+                req += `?dni=${data.dniCliente}`;
+            }
+            else if (data?.porcentajeDescuento) {
+                req += `?porcentajeDescuento=${data.porcentajeDescuento}`;
+            }
+            else if (data?.activo) {
+                req += `?activo=${data.activo}`;
+            }
+    
+            try {
+                const res = await axios.get(req);
+                if (res.status === 200) {
+                    setFiltros(data);
+                    setDescuentos(res.data);
+                }
+                else {
+                    console.log(`No se pudieron cargar los descuentos debido al error: ${res.message}`)
+                    setDescuentos([]);
+                }
+                
+            }
+            catch (error) {
+                console.log(`No se pudieron cargar los descunetos debido al error: ${error}`);
+            }
         }
         fetch();
-    }, []);
+    }, [targetEndpoint]);
 
     const agregarDescuento = async (data) => {
         try {
