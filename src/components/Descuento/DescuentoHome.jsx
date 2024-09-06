@@ -40,7 +40,10 @@ function DescuentoHome({targetEndpoint}) {
     }
 
     useEffect(() => {
-        fetchDescuentos();
+        const fetch = async () => {
+            await fetchDescuentos();
+        }
+        fetch();
     }, []);
 
     const agregarDescuento = async (data) => {

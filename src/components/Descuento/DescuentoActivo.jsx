@@ -34,7 +34,7 @@ function DescuentoActivo({targetEndpoint}) {
             }
         }
         fetchData();
-    }, [dni, tipo, navigate]);
+    }, [dni, tipo, navigate, targetEndpoint]);
 
 
     return (
