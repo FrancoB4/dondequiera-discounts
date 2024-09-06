@@ -4,16 +4,15 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Redes from "../Redes/Redes";
 
-function Registro({tipo}) {
-    const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/generarDescuento'
+function Registro({tipo, targetEndpoint}) {
+    // const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/generarDescuento'
     // const targetEndpoint = 'http://localhost:8080/api/v1/generarDescuento'
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
         try {
-            const res = await axios.post(targetEndpoint + `?dni=${data.dni}&nombre=${data.nombre}&tipo=${tipo}`);
-            console.log(res);
+            const res = await axios.post(targetEndpoint + `generarDescuento?dni=${data.dni}&nombre=${data.nombre}&tipo=${tipo}`);
             if (!res.data) {
                 console.log(`No se pudo crear el descuento debido al error: ${res}`);
             }
@@ -40,7 +39,8 @@ function Registro({tipo}) {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group input-group mb-2">
                             <span className="input-group-text"><i className="bi bi-person-vcard"></i></span>
-                            <input name="" className="form-control font-face-reg" placeholder="Tu DNI" type="number" {...register('dni')}/>
+                            <input name="" className="form-control font-face-reg" placeholder="Tu DNI" type="number" 
+                            {...register("dni", {required: true})}/>
                         </div>
                         <div className="form-group input-group mb-4">
                             <span className="input-group-text"> <i className="bi bi-person-badge"></i> </span>

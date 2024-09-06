@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import './Descuento.css'
 
-function Descuento() {
-    const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/descuentos';
+function Descuento({targetEndpoint}) {
+    // const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/descuentos';
     // const targetEndpoint = 'http://localhost:8080/api/v1/descuentos';
     const {dni} = useParams();
     const [descuento, setDescuento] = useState({ cliente: {nombre: "" } });
@@ -14,7 +14,7 @@ function Descuento() {
     useEffect(() => {
         const fetchData = async () =>{
             try {
-                const res = await axios.get(targetEndpoint + `?dni=${dni}`);
+                const res = await axios.get(targetEndpoint + `descuentos?dni=${dni}`);
                 if (!res.data) {
                     console.log(`No se pudo obtener el descuento debido al error: ${res.data}`);
                 }

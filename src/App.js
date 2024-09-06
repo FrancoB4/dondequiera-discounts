@@ -10,19 +10,22 @@ import DescuentoHome from "./components/Descuento/DescuentoHome";
 import DescuentoActivo from "./components/Descuento/DescuentoActivo";
 
 function App() {
+    const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/';
+    // const targetEndpoint = 'http://localhost:8080/api/v1/';
+
     return (
         <>
             <div className="App-container vh-100 font-face-eoi">
                 <Routes>
-                    <Route path='/' element={<Registro tipo={0} />} />
+                    <Route path='/' element={<Registro tipo={0} targetEndpoint={targetEndpoint}/>} />
 
-                    <Route path='/premio' element={<Registro tipo={1} />} />
+                    <Route path='/premio' element={<Registro tipo={1} targetEndpoint={targetEndpoint}/>} />
 
-                    <Route path='/descuento/:dni' element={<Descuento />} />
+                    <Route path='/descuento/:dni' element={<Descuento targetEndpoint={targetEndpoint}/>} />
 
-                    <Route path='/descuentos/lista' element={<DescuentoHome />} />
+                    <Route path='/descuentos/lista' element={<DescuentoHome targetEndpoint={targetEndpoint}/>} />
 
-                    <Route path='/poseeDescuentoActivo/:dni/:tipo' element={<DescuentoActivo />} />
+                    <Route path='/poseeDescuentoActivo/:dni/:tipo' element={<DescuentoActivo targetEndpoint={targetEndpoint}/>} />
                 </Routes>
             </div>
         </>
