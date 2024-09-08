@@ -3,14 +3,17 @@ import './Registro.css'
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Redes from "../Redes/Redes";
+import { useState } from "react";
 
 function Registro({tipo, targetEndpoint}) {
     // const targetEndpoint = 'https://dondequiera-descuentos-app-2aa983685de0.herokuapp.com/api/v1/generarDescuento'
     // const targetEndpoint = 'http://localhost:8080/api/v1/generarDescuento'
     const navigate = useNavigate();
+    const [isDisabled, setDisabled] = useState(false);
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
+        setDisabled(true);
         try {
             const res = await axios.post(targetEndpoint + `generarDescuento?dni=${data.dni}&nombre=${data.nombre}&tipo=${tipo}`);
             if (!res.data) {
@@ -48,7 +51,7 @@ function Registro({tipo, targetEndpoint}) {
                         </div>
                         <div className="form-group">
                             <Redes />
-                            <button type="submit" className="btn btn-primary btn-block ms-3"> Quiero mi regalo! </button>
+                            <button type="submit" className="btn btn-primary btn-block ms-3" disabled={isDisabled}> Quiero mi regalo! </button>
                         </div>
                     </form>
                     </div>
