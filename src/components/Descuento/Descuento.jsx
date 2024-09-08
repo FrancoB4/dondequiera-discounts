@@ -48,7 +48,7 @@ function Descuento({targetEndpoint}) {
                         <h4 className="m-3">Te ganaste un descuento de:</h4>
                         <h1 className="m-3">{descuento?.porcentajeDescuento}%</h1>
                         <hr className=""/>
-                        <h6 className="mt-5 mb-2">Cambialo con tu DNI hasta el 31 de Septiembre</h6>
+                        <h6 className="mt-5 mb-2">Cambialo con tu DNI hasta el 30 de Septiembre</h6>
                         <h6 className="">Te esperamos</h6>
                     </div>
                 </div>
